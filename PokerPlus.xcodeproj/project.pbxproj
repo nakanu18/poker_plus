@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		FA4CA2001C7D2EE300C232C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CA1FF1C7D2EE300C232C8 /* AppDelegate.swift */; };
-		FA4CA2021C7D2EE300C232C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CA2011C7D2EE300C232C8 /* ViewController.swift */; };
 		FA4CA2051C7D2EE300C232C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4CA2031C7D2EE300C232C8 /* Main.storyboard */; };
 		FA4CA2071C7D2EE300C232C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4CA2061C7D2EE300C232C8 /* Assets.xcassets */; };
 		FA4CA20A1C7D2EE300C232C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4CA2081C7D2EE300C232C8 /* LaunchScreen.storyboard */; };
+		FAE67EE61C7D344700613223 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67EE51C7D344700613223 /* SessionModel.swift */; };
+		FAE67EED1C7D4A3D00613223 /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67EEC1C7D4A3D00613223 /* SessionsViewController.swift */; };
+		FAE67EF21C7D569600613223 /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67EF11C7D569600613223 /* SessionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA4CA1FC1C7D2EE300C232C8 /* PokerPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4CA1FF1C7D2EE300C232C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA4CA2011C7D2EE300C232C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA4CA2041C7D2EE300C232C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA4CA2061C7D2EE300C232C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA4CA2091C7D2EE300C232C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA4CA20B1C7D2EE300C232C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE67EE51C7D344700613223 /* SessionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
+		FAE67EEC1C7D4A3D00613223 /* SessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
+		FAE67EF11C7D569600613223 /* SessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		FA4CA1FE1C7D2EE300C232C8 /* PokerPlus */ = {
 			isa = PBXGroup;
 			children = (
+				FAE67EE41C7D341D00613223 /* Models */,
+				FAE67EEB1C7D4A3D00613223 /* ViewControllers */,
+				FAE67EF01C7D569600613223 /* Views */,
 				FA4CA1FF1C7D2EE300C232C8 /* AppDelegate.swift */,
-				FA4CA2011C7D2EE300C232C8 /* ViewController.swift */,
 				FA4CA2031C7D2EE300C232C8 /* Main.storyboard */,
 				FA4CA2061C7D2EE300C232C8 /* Assets.xcassets */,
 				FA4CA2081C7D2EE300C232C8 /* LaunchScreen.storyboard */,
 				FA4CA20B1C7D2EE300C232C8 /* Info.plist */,
 			);
 			path = PokerPlus;
+			sourceTree = "<group>";
+		};
+		FAE67EE41C7D341D00613223 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAE67EE51C7D344700613223 /* SessionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAE67EEB1C7D4A3D00613223 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAE67EEC1C7D4A3D00613223 /* SessionsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FAE67EF01C7D569600613223 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAE67EF11C7D569600613223 /* SessionCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA4CA2021C7D2EE300C232C8 /* ViewController.swift in Sources */,
+				FAE67EF21C7D569600613223 /* SessionCell.swift in Sources */,
 				FA4CA2001C7D2EE300C232C8 /* AppDelegate.swift in Sources */,
+				FAE67EED1C7D4A3D00613223 /* SessionsViewController.swift in Sources */,
+				FAE67EE61C7D344700613223 /* SessionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +318,7 @@
 				FA4CA2101C7D2EE300C232C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
