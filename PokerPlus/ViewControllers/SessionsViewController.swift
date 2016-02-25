@@ -13,8 +13,25 @@ class SessionsViewController: UITableViewController
 {
     var sessionData: [SessionModel] = []
     
+    
+    
+    override func viewDidLoad()
+    {
+        sessionData.append(SessionModel())
+        super.viewDidLoad()
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sessionData.count
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        return UITableViewCell()
+        var cell: SessionCell
+        
+        cell = tableView.dequeueReusableCellWithIdentifier("SessionCell") as! SessionCell
+        cell.setupWithModel(sessionData[indexPath.row])
+        
+        return cell
     }
 }

@@ -14,13 +14,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Klx-oH-RiU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SessionCell" id="Klx-oH-RiU" customClass="SessionCell" customModule="PokerPlus" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Klx-oH-RiU" id="lts-0A-p5b">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETo-UJ-Qc6">
+                                            <rect key="frame" x="19" y="1" width="32" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="3Ew-WV-si1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Uzy-DJ-0XO">
+                                            <rect key="frame" x="19" y="14" width="32" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1/2 No Limit Hold'Em" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHm-iv-Fe7">
+                                            <rect key="frame" x="71" y="14" width="237.5" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horseshoe Casino" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzh-Vn-ubp">
+                                            <rect key="frame" x="71" y="1" width="118" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$670" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-gK-j0l">
+                                            <rect key="frame" x="501" y="14" width="58" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Uzy-DJ-0XO" firstAttribute="leading" secondItem="ETo-UJ-Qc6" secondAttribute="leading" id="1dO-Fi-eRN"/>
+                                        <constraint firstItem="eHm-iv-Fe7" firstAttribute="leading" secondItem="lzh-Vn-ubp" secondAttribute="leading" id="7HZ-T4-my3"/>
+                                        <constraint firstItem="1w3-gK-j0l" firstAttribute="top" secondItem="eHm-iv-Fe7" secondAttribute="top" id="7kK-fa-3tz"/>
+                                        <constraint firstAttribute="trailing" secondItem="1w3-gK-j0l" secondAttribute="trailing" constant="8" id="CZ4-TG-qkN"/>
+                                        <constraint firstItem="lzh-Vn-ubp" firstAttribute="top" secondItem="ETo-UJ-Qc6" secondAttribute="top" id="LVN-eI-2fB"/>
+                                        <constraint firstItem="lzh-Vn-ubp" firstAttribute="leading" secondItem="ETo-UJ-Qc6" secondAttribute="trailing" constant="20" id="PNU-t8-wM2"/>
+                                        <constraint firstItem="eHm-iv-Fe7" firstAttribute="top" secondItem="Uzy-DJ-0XO" secondAttribute="top" id="UVw-rR-SCh"/>
+                                        <constraint firstItem="Uzy-DJ-0XO" firstAttribute="width" secondItem="ETo-UJ-Qc6" secondAttribute="width" id="e3i-Ad-X1j"/>
+                                        <constraint firstItem="ETo-UJ-Qc6" firstAttribute="leading" secondItem="lts-0A-p5b" secondAttribute="leading" constant="19" id="tHJ-LL-Ylg"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="ETo-UJ-Qc6" firstAttribute="centerY" secondItem="Klx-oH-RiU" secondAttribute="centerY" constant="-12" id="gf4-oE-Eam"/>
+                                    <constraint firstItem="Uzy-DJ-0XO" firstAttribute="centerY" secondItem="Klx-oH-RiU" secondAttribute="centerY" constant="7" id="ht4-uX-LXY"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="labelDateDay" destination="ETo-UJ-Qc6" id="GGa-9R-Hsu"/>
+                                    <outlet property="labelDateNum" destination="Uzy-DJ-0XO" id="3v6-dO-8Fh"/>
+                                    <outlet property="labelEarnings" destination="1w3-gK-j0l" id="zuQ-FU-CZB"/>
+                                    <outlet property="labelGameType" destination="eHm-iv-Fe7" id="u6z-Hk-2Wc"/>
+                                    <outlet property="labelLocation" destination="lzh-Vn-ubp" id="ajf-Au-05W"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

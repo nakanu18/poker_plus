@@ -11,4 +11,18 @@ import UIKit
 
 class SessionCell: UITableViewCell
 {
+    @IBOutlet weak var labelDateDay: UILabel?
+    @IBOutlet weak var labelDateNum: UILabel?
+
+    @IBOutlet weak var labelLocation: UILabel?
+    @IBOutlet weak var labelGameType: UILabel?
+
+    @IBOutlet weak var labelEarnings: UILabel?
+    
+    
+    
+    func setupWithModel(newSession: SessionModel)
+    {
+        labelEarnings?.text = "$\(newSession.cashout)"
+    }
 }
