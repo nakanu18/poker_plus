@@ -11,6 +11,7 @@
 		FA4CA2051C7D2EE300C232C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4CA2031C7D2EE300C232C8 /* Main.storyboard */; };
 		FA4CA2071C7D2EE300C232C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4CA2061C7D2EE300C232C8 /* Assets.xcassets */; };
 		FA4CA20A1C7D2EE300C232C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4CA2081C7D2EE300C232C8 /* LaunchScreen.storyboard */; };
+		FADB00A81CEBF1BB00E0A98E /* SessionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB00A71CEBF1BB00E0A98E /* SessionsService.swift */; };
 		FAE67EE61C7D344700613223 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67EE51C7D344700613223 /* SessionModel.swift */; };
 		FAE67EED1C7D4A3D00613223 /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67EEC1C7D4A3D00613223 /* SessionsViewController.swift */; };
 		FAE67EF21C7D569600613223 /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67EF11C7D569600613223 /* SessionCell.swift */; };
@@ -23,6 +24,7 @@
 		FA4CA2061C7D2EE300C232C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA4CA2091C7D2EE300C232C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA4CA20B1C7D2EE300C232C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FADB00A71CEBF1BB00E0A98E /* SessionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsService.swift; sourceTree = "<group>"; };
 		FAE67EE51C7D344700613223 /* SessionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		FAE67EEC1C7D4A3D00613223 /* SessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
 		FAE67EF11C7D569600613223 /* SessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionCell.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				FAE67EE41C7D341D00613223 /* Models */,
+				FADB00A61CEBF16700E0A98E /* Service */,
 				FAE67EEB1C7D4A3D00613223 /* ViewControllers */,
 				FAE67EF01C7D569600613223 /* Views */,
 				FA4CA1FF1C7D2EE300C232C8 /* AppDelegate.swift */,
@@ -68,6 +71,14 @@
 				FA4CA20B1C7D2EE300C232C8 /* Info.plist */,
 			);
 			path = PokerPlus;
+			sourceTree = "<group>";
+		};
+		FADB00A61CEBF16700E0A98E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FADB00A71CEBF1BB00E0A98E /* SessionsService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		FAE67EE41C7D341D00613223 /* Models */ = {
@@ -168,6 +179,7 @@
 				FAE67EF21C7D569600613223 /* SessionCell.swift in Sources */,
 				FA4CA2001C7D2EE300C232C8 /* AppDelegate.swift in Sources */,
 				FAE67EED1C7D4A3D00613223 /* SessionsViewController.swift in Sources */,
+				FADB00A81CEBF1BB00E0A98E /* SessionsService.swift in Sources */,
 				FAE67EE61C7D344700613223 /* SessionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,26 +11,43 @@ import UIKit
 
 class SessionsViewController: UITableViewController
 {
-    var sessionData: [SessionModel] = []
+    //
+    // MARK: Properties
+    //
+    private lazy var sessionsService = SessionsService()
     
     
+    
+    
+    
+    
+    //
+    // MARK: Life cycle methods
+    //
     
     override func viewDidLoad()
     {
-        sessionData.append(SessionModel())
         super.viewDidLoad()
+        sessionsService.useTestData = true
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sessionData.count
+    
+
+    //
+    // MARK: Tableview methods
+    //
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return sessionsService.allSessions().count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var cell: SessionCell
+        let cell: SessionCell
         
         cell = tableView.dequeueReusableCellWithIdentifier("SessionCell") as! SessionCell
-        cell.setupWithModel(sessionData[indexPath.row])
+        cell.setupWithModel( sessionsService.allSessions()[indexPath.row] )
         
         return cell
     }
