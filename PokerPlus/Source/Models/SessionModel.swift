@@ -14,13 +14,30 @@ public struct SessionModel
     {
         case HoldEm_NoLimit
         case Omaha_PotLimit
+        
+        func description() -> String
+        {
+            switch self
+            {
+                case .HoldEm_NoLimit:   return "NL Hold'Em"
+                case .Omaha_PotLimit:   return "PL Omaha"
+            }
+        }
     }
     
     enum TableType
     {
         case FullRing
         case ShortHanded
-        case HeadsUp
+        
+        func description() -> String
+        {
+            switch self
+            {
+                case .FullRing:     return "Full Ring"
+                case .ShortHanded:  return "6 max"
+            }
+        }
     }
     
     

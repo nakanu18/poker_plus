@@ -11,6 +11,10 @@ import UIKit
 
 class SessionCell: UITableViewCell
 {
+    //
+    // MARK: Outlets
+    //
+    
     @IBOutlet weak var labelDateDay: UILabel?
     @IBOutlet weak var labelDateNum: UILabel?
 
@@ -21,8 +25,19 @@ class SessionCell: UITableViewCell
     
     
     
-    func setupWithModel(newSession: SessionModel)
+    
+    
+    
+    //
+    // MARK: Initializers
+    //
+    
+    func setupWithModel( newSession: SessionModel )
     {
+        labelDateDay?.text = newSession.dateBegin.dayName()
+        labelDateNum?.text = newSession.dateBegin.dayNumberOfMonth()
+        
+        labelGameType?.text = newSession.gameType.description()
         labelEarnings?.text = "$\(newSession.cashout)"
     }
 }
