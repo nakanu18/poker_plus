@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Sessions-->
@@ -77,6 +78,7 @@
                                     <outlet property="labelEarnings" destination="1w3-gK-j0l" id="zuQ-FU-CZB"/>
                                     <outlet property="labelGameType" destination="eHm-iv-Fe7" id="u6z-Hk-2Wc"/>
                                     <outlet property="labelLocation" destination="lzh-Vn-ubp" id="ajf-Au-05W"/>
+                                    <segue destination="9T1-t7-zEh" kind="show" identifier="gotoSessionDetails" id="5Yh-WA-dj5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -90,6 +92,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Td-Yf-hj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1306" y="458"/>
+        </scene>
+        <!--Sessions Details View Controller-->
+        <scene sceneID="yMe-sY-GMH">
+            <objects>
+                <tableViewController id="9T1-t7-zEh" customClass="SessionsDetailsViewController" customModule="PokerPlus" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cky-zz-d4K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SessionDetailsFieldValueCell" id="und-AO-Eou" customClass="SessionDetailsFieldValueCell" customModule="PokerPlus" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="und-AO-Eou" id="Z8E-QJ-Fjq">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rm-wb-FZw">
+                                            <rect key="frame" x="8" y="11" width="86" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field Value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CF-PQ-5Fo">
+                                            <rect key="frame" x="509" y="11" width="83" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0rm-wb-FZw" firstAttribute="leading" secondItem="Z8E-QJ-Fjq" secondAttribute="leadingMargin" id="7Hu-55-Nhj"/>
+                                        <constraint firstItem="1CF-PQ-5Fo" firstAttribute="centerY" secondItem="Z8E-QJ-Fjq" secondAttribute="centerY" id="9dd-hs-hDt"/>
+                                        <constraint firstItem="1CF-PQ-5Fo" firstAttribute="trailing" secondItem="Z8E-QJ-Fjq" secondAttribute="trailingMargin" id="PWZ-qv-e2t"/>
+                                        <constraint firstItem="0rm-wb-FZw" firstAttribute="centerY" secondItem="Z8E-QJ-Fjq" secondAttribute="centerY" id="a2T-3j-Oh6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelFieldName" destination="0rm-wb-FZw" id="TRU-4j-oaK"/>
+                                    <outlet property="labelFieldValue" destination="1CF-PQ-5Fo" id="taS-FE-MKY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="9T1-t7-zEh" id="TKk-WK-KbV"/>
+                            <outlet property="delegate" destination="9T1-t7-zEh" id="tdA-HB-PjF"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHN-Ub-rcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2010" y="458"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4E3-uR-hqW">

@@ -10,7 +10,9 @@ import Foundation
 
 extension NSDate
 {
+    //
     // MARK: Helpers
+    //
     
     func dayName() -> String
     {

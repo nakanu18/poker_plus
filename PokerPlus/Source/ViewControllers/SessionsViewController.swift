@@ -14,6 +14,7 @@ class SessionsViewController: UITableViewController
     //
     // MARK: Properties
     //
+    
     private lazy var sessionsService = SessionsService()
     
     
@@ -31,24 +32,38 @@ class SessionsViewController: UITableViewController
         sessionsService.useTestData = true
     }
     
-    
-
     //
     // MARK: Tableview methods
     //
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override func tableView( tableView: UITableView, numberOfRowsInSection section: Int ) -> Int
     {
         return sessionsService.allSessions().count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath ) -> UITableViewCell
     {
-        let cell: SessionCell
-        
-        cell = tableView.dequeueReusableCellWithIdentifier("SessionCell") as! SessionCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("SessionCell") as! SessionCell
+
         cell.setupWithModel( sessionsService.allSessions()[indexPath.row] )
         
         return cell
+    }
+    
+    //
+    // MARK: Segues
+    //
+    
+    override func prepareForSegue( segue: UIStoryboardSegue, sender: AnyObject? )
+    {
+        if( segue.identifier == "gotoSessionDetails" )
+        {
+            let sessionDetailsVC = segue.destinationViewController as! SessionsDetailsViewController
+            
+            if let selectedRow = tableView.indexPathForSelectedRow?.row
+            {
+                sessionDetailsVC.setupWithSession( sessionsService.allSessions()[selectedRow] )
+            }
+        }
     }
 }
