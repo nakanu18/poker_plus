@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA4443B21CF28E8E00EBD154 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		FA4CA1FC1C7D2EE300C232C8 /* PokerPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4CA1FF1C7D2EE300C232C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA4CA2041C7D2EE300C232C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		FA4CA1FE1C7D2EE300C232C8 /* PokerPlus */ = {
 			isa = PBXGroup;
 			children = (
+				FA4443B21CF28E8E00EBD154 /* MyPlayground.playground */,
 				FADB00AB1CEC01E500E0A98E /* Source */,
 				FADB00AA1CEC019300E0A98E /* Utils */,
 				FA4CA1FF1C7D2EE300C232C8 /* AppDelegate.swift */,
