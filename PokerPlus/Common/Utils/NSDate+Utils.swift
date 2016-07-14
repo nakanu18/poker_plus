@@ -19,7 +19,7 @@ extension NSDate
         let dateFormatter = NSDateFormatter()
         
         dateFormatter.dateFormat = "EEE"
-        return dateFormatter.stringFromDate( self )
+        return dateFormatter.stringFromDate(self)
     }
     
     func dayNumberOfMonth() -> String
@@ -27,6 +27,6 @@ extension NSDate
         let dateFormatter = NSDateFormatter()
         
         dateFormatter.dateFormat = "dd"
-        return dateFormatter.stringFromDate( self )
+        return dateFormatter.stringFromDate(self)
     }
 }

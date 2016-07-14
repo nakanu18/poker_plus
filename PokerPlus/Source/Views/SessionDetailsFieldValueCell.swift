@@ -27,7 +27,7 @@ class SessionDetailsFieldValueCell: UITableViewCell
     // MARK: Initializers
     //
     
-    func setupWithField( fieldName: String, fieldValue: String )
+    func setupWithField(fieldName: String, fieldValue: String)
     {
         labelFieldName?.text = fieldName
         labelFieldValue?.text = fieldValue

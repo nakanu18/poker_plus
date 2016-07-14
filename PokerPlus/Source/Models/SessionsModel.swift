@@ -19,7 +19,7 @@ public struct SessionsModel
 
 extension SessionsModel: PropertyListReadable
 {
-    init?( propertyListRepresentation: NSDictionary? )
+    init?(propertyListRepresentation: NSDictionary?)
     {
         guard let values = propertyListRepresentation,
                   numSessions = values["numSessions"] as? Int else
@@ -35,7 +35,7 @@ extension SessionsModel: PropertyListReadable
             {
                 return nil
             }
-            self.sessions.append( session )
+            self.sessions.append(session)
         }
     }
     

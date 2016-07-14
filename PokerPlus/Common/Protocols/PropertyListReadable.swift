@@ -10,6 +10,6 @@ import Foundation
 
 protocol PropertyListReadable
 {
-    init?( propertyListRepresentation:NSDictionary? )
+    init?(propertyListRepresentation:NSDictionary?)
     func propertyListRepresentation() -> NSDictionary
 }
