@@ -17,7 +17,11 @@
 		FADB00B51CEC01E500E0A98E /* SessionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB00AF1CEC01E500E0A98E /* SessionsService.swift */; };
 		FADB00B61CEC01E500E0A98E /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB00B11CEC01E500E0A98E /* SessionsViewController.swift */; };
 		FADB00B71CEC01E500E0A98E /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB00B31CEC01E500E0A98E /* SessionCell.swift */; };
-		FADB00B91CEC02AF00E0A98E /* NSDate+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB00B81CEC02AF00E0A98E /* NSDate+Utils.swift */; };
+		FAF9145F1D35D72500C2BA90 /* NSDate+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9145E1D35D72500C2BA90 /* NSDate+Utils.swift */; };
+		FAF914621D35D75D00C2BA90 /* PropertyListReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF914611D35D75D00C2BA90 /* PropertyListReadable.swift */; };
+		FAF914661D35D8CE00C2BA90 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF914641D35D8CE00C2BA90 /* GameType.swift */; };
+		FAF914671D35D8CE00C2BA90 /* TableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF914651D35D8CE00C2BA90 /* TableType.swift */; };
+		FAF914691D35E3C000C2BA90 /* SessionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF914681D35E3C000C2BA90 /* SessionsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +38,11 @@
 		FADB00AF1CEC01E500E0A98E /* SessionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsService.swift; sourceTree = "<group>"; };
 		FADB00B11CEC01E500E0A98E /* SessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
 		FADB00B31CEC01E500E0A98E /* SessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionCell.swift; sourceTree = "<group>"; };
-		FADB00B81CEC02AF00E0A98E /* NSDate+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utils.swift"; sourceTree = "<group>"; };
+		FAF9145E1D35D72500C2BA90 /* NSDate+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utils.swift"; sourceTree = "<group>"; };
+		FAF914611D35D75D00C2BA90 /* PropertyListReadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListReadable.swift; sourceTree = "<group>"; };
+		FAF914641D35D8CE00C2BA90 /* GameType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		FAF914651D35D8CE00C2BA90 /* TableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableType.swift; sourceTree = "<group>"; };
+		FAF914681D35E3C000C2BA90 /* SessionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				FA4443B21CF28E8E00EBD154 /* MyPlayground.playground */,
+				FAF9145C1D35D70400C2BA90 /* Common */,
 				FADB00AB1CEC01E500E0A98E /* Source */,
-				FADB00AA1CEC019300E0A98E /* Utils */,
 				FA4CA1FF1C7D2EE300C232C8 /* AppDelegate.swift */,
 				FA4CA2031C7D2EE300C232C8 /* Main.storyboard */,
 				FA4CA2061C7D2EE300C232C8 /* Assets.xcassets */,
@@ -79,17 +87,10 @@
 			path = PokerPlus;
 			sourceTree = "<group>";
 		};
-		FADB00AA1CEC019300E0A98E /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				FADB00B81CEC02AF00E0A98E /* NSDate+Utils.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		FADB00AB1CEC01E500E0A98E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				FAF914631D35D8CE00C2BA90 /* Enums */,
 				FADB00AC1CEC01E500E0A98E /* Models */,
 				FADB00AE1CEC01E500E0A98E /* Services */,
 				FADB00B01CEC01E500E0A98E /* ViewControllers */,
@@ -102,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				FADB00AD1CEC01E500E0A98E /* SessionModel.swift */,
+				FAF914681D35E3C000C2BA90 /* SessionsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,6 +132,40 @@
 				FAA0054E1CED5746000DEE31 /* SessionDetailsFieldValueCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FAF9145C1D35D70400C2BA90 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FAF914601D35D75D00C2BA90 /* Protocols */,
+				FAF9145D1D35D72500C2BA90 /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FAF9145D1D35D72500C2BA90 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FAF9145E1D35D72500C2BA90 /* NSDate+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FAF914601D35D75D00C2BA90 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAF914611D35D75D00C2BA90 /* PropertyListReadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FAF914631D35D8CE00C2BA90 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				FAF914641D35D8CE00C2BA90 /* GameType.swift */,
+				FAF914651D35D8CE00C2BA90 /* TableType.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,14 +239,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF9145F1D35D72500C2BA90 /* NSDate+Utils.swift in Sources */,
+				FAF914621D35D75D00C2BA90 /* PropertyListReadable.swift in Sources */,
 				FAA0054F1CED5747000DEE31 /* SessionDetailsFieldValueCell.swift in Sources */,
+				FAF914661D35D8CE00C2BA90 /* GameType.swift in Sources */,
 				FADB00B51CEC01E500E0A98E /* SessionsService.swift in Sources */,
 				FADB00B61CEC01E500E0A98E /* SessionsViewController.swift in Sources */,
+				FAF914691D35E3C000C2BA90 /* SessionsModel.swift in Sources */,
 				FADB00B71CEC01E500E0A98E /* SessionCell.swift in Sources */,
 				FADB00B41CEC01E500E0A98E /* SessionModel.swift in Sources */,
 				FAA0054D1CED4FD5000DEE31 /* SessionDetailsViewController.swift in Sources */,
-				FADB00B91CEC02AF00E0A98E /* NSDate+Utils.swift in Sources */,
 				FA4CA2001C7D2EE300C232C8 /* AppDelegate.swift in Sources */,
+				FAF914671D35D8CE00C2BA90 /* TableType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

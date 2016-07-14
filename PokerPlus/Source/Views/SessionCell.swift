@@ -34,8 +34,8 @@ class SessionCell: UITableViewCell
     
     func setupWithModel( newSession: SessionModel )
     {
-        labelDateDay?.text = newSession.dateBegin.dayName()
-        labelDateNum?.text = newSession.dateBegin.dayNumberOfMonth()
+        labelDateDay?.text = newSession.dateBegan.dayName()
+        labelDateNum?.text = newSession.dateBegan.dayNumberOfMonth()
         
         labelGameType?.text = newSession.gameType.description()
         labelEarnings?.text = "$\(newSession.cashout)"

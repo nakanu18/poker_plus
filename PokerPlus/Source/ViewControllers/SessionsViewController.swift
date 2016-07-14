@@ -15,7 +15,7 @@ class SessionsViewController: UITableViewController
     // MARK: Properties
     //
     
-    private lazy var sessionsService = SessionsService()
+    private lazy var sessionsService = SessionsService( useTestData: false )
     
     
     
@@ -29,7 +29,12 @@ class SessionsViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        sessionsService.useTestData = true
+    }
+    
+    override func viewWillDisappear(animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        self.sessionsService.saveAllSessions()
     }
     
     //
@@ -38,15 +43,14 @@ class SessionsViewController: UITableViewController
     
     override func tableView( tableView: UITableView, numberOfRowsInSection section: Int ) -> Int
     {
-        return sessionsService.allSessions().count
+        return self.sessionsService.allSessions().count
     }
     
     override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath ) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SessionCell") as! SessionCell
+        let cell = tableView.dequeueReusableCellWithIdentifier( "SessionCell" ) as! SessionCell
 
-        cell.setupWithModel( sessionsService.allSessions()[indexPath.row] )
-        
+        cell.setupWithModel( self.sessionsService.allSessions()[indexPath.row] )
         return cell
     }
     
@@ -56,11 +60,11 @@ class SessionsViewController: UITableViewController
     
     override func prepareForSegue( segue: UIStoryboardSegue, sender: AnyObject? )
     {
-        if( segue.identifier == "gotoSessionDetails" )
+        if segue.identifier == "gotoSessionDetails"
         {
             let sessionDetailsVC = segue.destinationViewController as! SessionsDetailsViewController
             
-            if let selectedRow = tableView.indexPathForSelectedRow?.row
+            if let selectedRow = self.tableView.indexPathForSelectedRow?.row
             {
                 sessionDetailsVC.setupWithSession( sessionsService.allSessions()[selectedRow] )
             }

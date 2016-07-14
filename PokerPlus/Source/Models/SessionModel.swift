@@ -10,50 +10,74 @@ import Foundation
 
 public struct SessionModel
 {
-    enum GameType
-    {
-        case HoldEm_NoLimit
-        case Omaha_PotLimit
-        
-        func description() -> String
-        {
-            switch self
-            {
-                case .HoldEm_NoLimit:   return "NL Hold'Em"
-                case .Omaha_PotLimit:   return "PL Omaha"
-            }
-        }
-    }
-    
-    enum TableType
-    {
-        case FullRing
-        case ShortHanded
-        
-        func description() -> String
-        {
-            switch self
-            {
-                case .FullRing:     return "Full Ring"
-                case .ShortHanded:  return "6 max"
-            }
-        }
-    }
-    
-    
-    
     var gameType: GameType        = .HoldEm_NoLimit
     var tableType: TableType      = .FullRing
-    var smallBlind: NSInteger     = 1
-    var bigBlind: NSInteger       = 2
+    var smallBlind: Int           = 1
+    var bigBlind: Int             = 2
 
-    var dateBegin: NSDate         = NSDate()
-    var dateEnd: NSDate           = NSDate()
-    var breakTime: NSTimeInterval = 0.0
+    var dateBegan: NSDate         = NSDate()
 
-    var buyins: [NSNumber]        = []
-    var cashout: NSInteger        = 0
-    var expenses: [NSNumber]      = []
+    var buyins: [Int]             = []
+    var cashout: Int              = 0
+    var expenses: [Int]           = []
+}
 
-    var notes: NSString           = ""
+//
+// MARK: PropertyListReadable
+//
+
+extension SessionModel: PropertyListReadable
+{
+    init?( propertyListRepresentation: NSDictionary? )
+    {
+        guard let values = propertyListRepresentation else
+        {
+            return nil
+        }
+        
+        if let gameType     = values["gameType"] as? Int,
+            tableType       = values["tableType"] as? Int,
+            smallBlind      = values["smallBlind"] as? NSInteger,
+            bigBlind        = values["bigBlind"] as? NSInteger,
+        
+            dateBegan       = values["dateBegan"] as? NSDate,
+            
+            buyins          = values["buyins"] as? [Int],
+            cashout         = values["cashout"] as? Int,
+            expenses        = values["expenses"] as? [Int]
+        {
+            self.gameType   = GameType( rawValue: gameType ) ?? .HoldEm_NoLimit
+            self.tableType  = TableType( rawValue: tableType ) ?? .FullRing
+            self.smallBlind = smallBlind
+            self.bigBlind   = bigBlind
+            
+            self.dateBegan  = dateBegan
+            
+            self.buyins     = buyins
+            self.cashout    = cashout
+            self.expenses   = expenses
+        }
+        else
+        {
+            return nil
+        }
+    }
+    
+    func propertyListRepresentation() -> NSDictionary
+    {
+        var representation: [String: AnyObject] = [:]
+        
+        representation["gameType"]   = self.gameType.rawValue
+        representation["tableType"]  = self.tableType.rawValue
+        representation["smallBlind"] = self.smallBlind
+        representation["bigBlind"]   = self.bigBlind
+
+        representation["dateBegan"]  = self.dateBegan
+
+        representation["buyins"]     = self.buyins
+        representation["cashout"]    = self.cashout
+        representation["expenses"]   = self.expenses
+        
+        return representation
+    }
 }
