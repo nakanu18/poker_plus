@@ -69,7 +69,7 @@ class SessionsDetailsViewController: UITableViewController
         let cell: SessionDetailsFieldValueCell
         
         cell = tableView.dequeueReusableCellWithIdentifier("SessionDetailsFieldValueCell") as! SessionDetailsFieldValueCell
-        cell.setupWithField("Game", fieldValue: sessionModel.gameType.description())
+        cell.setupWithField( "Game", fieldValue: sessionModel.gameType.description() )
         
         return cell
     }

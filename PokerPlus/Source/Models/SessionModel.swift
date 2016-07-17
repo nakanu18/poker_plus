@@ -28,7 +28,7 @@ public struct SessionModel
 
 extension SessionModel: PropertyListReadable
 {
-    init?(propertyListRepresentation: NSDictionary?)
+    init?( propertyListRepresentation: NSDictionary? )
     {
         guard let values = propertyListRepresentation else
         {
@@ -46,8 +46,8 @@ extension SessionModel: PropertyListReadable
             cashout         = values["cashout"] as? Int,
             expenses        = values["expenses"] as? [Int]
         {
-            self.gameType   = GameType(rawValue: gameType) ?? .HoldEm_NoLimit
-            self.tableType  = TableType(rawValue: tableType) ?? .FullRing
+            self.gameType   = GameType( rawValue: gameType ) ?? .HoldEm_NoLimit
+            self.tableType  = TableType( rawValue: tableType ) ?? .FullRing
             self.smallBlind = smallBlind
             self.bigBlind   = bigBlind
             

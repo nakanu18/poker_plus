@@ -15,7 +15,7 @@ class SessionsViewController: UITableViewController
     // MARK: Properties
     //
     
-    private lazy var sessionsService = SessionsService(useTestData: false)
+    private lazy var sessionsService = SessionsService( useTestData: false )
     
     
     
@@ -41,19 +41,17 @@ class SessionsViewController: UITableViewController
     // MARK: Tableview methods
     //
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override func tableView( tableView: UITableView, numberOfRowsInSection section: Int ) -> Int
     {
         return self.sessionsService.allSessions().count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath ) -> UITableViewCell
     {
-        if let cell = tableView.dequeueReusableCellWithIdentifier("SessionCell") as? SessionCell
-        {
-            cell.setupWithModel(self.sessionsService.allSessions()[indexPath.row])
-            return cell
-        }
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCellWithIdentifier( "SessionCell" ) as! SessionCell
+
+        cell.setupWithModel( self.sessionsService.allSessions()[indexPath.row] )
+        return cell
     }
     
     //
@@ -68,7 +66,7 @@ class SessionsViewController: UITableViewController
             
             if let selectedRow = self.tableView.indexPathForSelectedRow?.row
             {
-                sessionDetailsVC.setupWithSession(sessionsService.allSessions()[selectedRow])
+                sessionDetailsVC.setupWithSession( sessionsService.allSessions()[selectedRow] )
             }
         }
     }

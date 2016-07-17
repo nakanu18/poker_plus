@@ -39,9 +39,9 @@ class SessionsService
         let saveData = NSMutableData()
         let archiver = NSKeyedArchiver(forWritingWithMutableData: saveData)
         
-        archiver.encodeObject(self.sessionsData.propertyListRepresentation(), forKey: self.POKER_PLUS_SESSIONS_KEY)
+        archiver.encodeObject( self.sessionsData.propertyListRepresentation(), forKey: self.POKER_PLUS_SESSIONS_KEY )
         archiver.finishEncoding()
-        NSUserDefaults.standardUserDefaults().setObject(saveData, forKey: self.POKER_PLUS_SAVE_KEY)
+        NSUserDefaults.standardUserDefaults().setObject( saveData, forKey: self.POKER_PLUS_SAVE_KEY )
     }
     
     func allSessions(forceFetch forceFetch: Bool = false) -> [SessionModel]
@@ -87,15 +87,15 @@ class SessionsService
     
     private func fetchSessionsFromUserDefaults() -> SessionsModel
     {
-        guard let saveData = NSUserDefaults.standardUserDefaults().dataForKey(self.POKER_PLUS_SAVE_KEY) else
+        guard let saveData = NSUserDefaults.standardUserDefaults().dataForKey( self.POKER_PLUS_SAVE_KEY ) else
         {
             return SessionsModel()
         }
         
         let unarchiver = NSKeyedUnarchiver(forReadingWithData: saveData)
         
-        guard let sessionsDictionary = unarchiver.decodeObjectForKey(self.POKER_PLUS_SESSIONS_KEY) as? NSDictionary,
-                  sessionsModel = SessionsModel(propertyListRepresentation: sessionsDictionary) else
+        guard let sessionsDictionary = unarchiver.decodeObjectForKey( self.POKER_PLUS_SESSIONS_KEY ) as? NSDictionary,
+                  sessionsModel = SessionsModel( propertyListRepresentation: sessionsDictionary ) else
         {
             unarchiver.finishDecoding()
             return SessionsModel()
