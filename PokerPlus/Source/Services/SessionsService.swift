@@ -34,16 +34,6 @@ class SessionsService
         self.useTestData = useTestData
     }
     
-    func saveAllSessions()
-    {
-        let saveData = NSMutableData()
-        let archiver = NSKeyedArchiver(forWritingWithMutableData: saveData)
-        
-        archiver.encodeObject( self.sessionsData.propertyListRepresentation(), forKey: self.POKER_PLUS_SESSIONS_KEY )
-        archiver.finishEncoding()
-        NSUserDefaults.standardUserDefaults().setObject( saveData, forKey: self.POKER_PLUS_SAVE_KEY )
-    }
-    
     func allSessions(forceFetch forceFetch: Bool = false) -> [SessionModel]
     {
         // Fetch if forced or we have no data
@@ -61,9 +51,19 @@ class SessionsService
             self.sessionsData = self.fetchSessionsFromUserDefaults()
         }
         return self.sessionsData.sessions
-    }
+    }    
     
-    // 
+    func saveAllSessions()
+    {
+        let saveData = NSMutableData()
+        let archiver = NSKeyedArchiver(forWritingWithMutableData: saveData)
+        
+        archiver.encodeObject( self.sessionsData.propertyListRepresentation(), forKey: self.POKER_PLUS_SESSIONS_KEY )
+        archiver.finishEncoding()
+        NSUserDefaults.standardUserDefaults().setObject( saveData, forKey: self.POKER_PLUS_SAVE_KEY )
+    }
+
+    //
     // MARK: Private methods
     //
     

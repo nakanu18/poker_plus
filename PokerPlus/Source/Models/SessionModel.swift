@@ -20,6 +20,38 @@ public struct SessionModel
     var buyins: [Int]             = []
     var cashout: Int              = 0
     var expenses: [Int]           = []
+    
+    //
+    // MARK: Computed properties
+    //
+    
+    var totalBuyin: Int
+    {
+        get
+        {
+            var total = 0
+            
+            for buyin in self.buyins
+            {
+                total += buyin
+            }
+            return total
+        }
+    }
+    
+    var totalExpenses: Int
+        {
+        get
+        {
+            var total = 0
+            
+            for expense in self.expenses
+            {
+                total += expense
+            }
+            return total
+        }
+    }
 }
 
 //

@@ -11,6 +11,7 @@
 		FA4CA2051C7D2EE300C232C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4CA2031C7D2EE300C232C8 /* Main.storyboard */; };
 		FA4CA2071C7D2EE300C232C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4CA2061C7D2EE300C232C8 /* Assets.xcassets */; };
 		FA4CA20A1C7D2EE300C232C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4CA2081C7D2EE300C232C8 /* LaunchScreen.storyboard */; };
+		FA9F63B21D3B4A530055AD5D /* SessionDetailsRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F63B11D3B4A530055AD5D /* SessionDetailsRowType.swift */; };
 		FAA0054D1CED4FD5000DEE31 /* SessionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0054C1CED4FD5000DEE31 /* SessionDetailsViewController.swift */; };
 		FAA0054F1CED5747000DEE31 /* SessionDetailsFieldValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0054E1CED5746000DEE31 /* SessionDetailsFieldValueCell.swift */; };
 		FADB00B41CEC01E500E0A98E /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB00AD1CEC01E500E0A98E /* SessionModel.swift */; };
@@ -32,6 +33,7 @@
 		FA4CA2061C7D2EE300C232C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA4CA2091C7D2EE300C232C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA4CA20B1C7D2EE300C232C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA9F63B11D3B4A530055AD5D /* SessionDetailsRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailsRowType.swift; sourceTree = "<group>"; };
 		FAA0054C1CED4FD5000DEE31 /* SessionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailsViewController.swift; sourceTree = "<group>"; };
 		FAA0054E1CED5746000DEE31 /* SessionDetailsFieldValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailsFieldValueCell.swift; sourceTree = "<group>"; };
 		FADB00AD1CEC01E500E0A98E /* SessionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF914641D35D8CE00C2BA90 /* GameType.swift */,
+				FA9F63B11D3B4A530055AD5D /* SessionDetailsRowType.swift */,
 				FAF914651D35D8CE00C2BA90 /* TableType.swift */,
 			);
 			path = Enums;
@@ -241,6 +244,7 @@
 			files = (
 				FAF9145F1D35D72500C2BA90 /* NSDate+Utils.swift in Sources */,
 				FAF914621D35D75D00C2BA90 /* PropertyListReadable.swift in Sources */,
+				FA9F63B21D3B4A530055AD5D /* SessionDetailsRowType.swift in Sources */,
 				FAA0054F1CED5747000DEE31 /* SessionDetailsFieldValueCell.swift in Sources */,
 				FAF914661D35D8CE00C2BA90 /* GameType.swift in Sources */,
 				FADB00B51CEC01E500E0A98E /* SessionsService.swift in Sources */,

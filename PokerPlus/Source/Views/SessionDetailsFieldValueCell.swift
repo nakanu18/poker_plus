@@ -15,21 +15,20 @@ class SessionDetailsFieldValueCell: UITableViewCell
     // MARK: Outlets
     //
     
-    @IBOutlet weak var labelFieldName: UILabel?
-    @IBOutlet weak var labelFieldValue: UILabel?
+    @IBOutlet private weak var labelFieldName: UILabel!
+    @IBOutlet private weak var labelFieldValue: UILabel!
     
+    // MARK: Properties
     
-    
-    
-    
-    
-    //
-    // MARK: Initializers
-    //
-    
-    func setupWithField( fieldName: String, fieldValue: String )
+    var nameText: String?
     {
-        labelFieldName?.text = fieldName
-        labelFieldValue?.text = fieldValue
+        set { self.labelFieldName.text = newValue }
+        get { return self.labelFieldName.text }
+    }
+
+    var valueText: String?
+        {
+        set { self.labelFieldValue.text = newValue }
+        get { return self.labelFieldValue.text }
     }
 }

@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Klx-oH-RiU" id="lts-0A-p5b">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETo-UJ-Qc6">
@@ -38,13 +38,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$X/X No Limit Hold'Em" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHm-iv-Fe7">
-                                            <rect key="frame" x="71" y="14" width="243.5" height="29"/>
+                                            <rect key="frame" x="71" y="14" width="243" height="29"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzh-Vn-ubp">
-                                            <rect key="frame" x="71" y="1" width="55.5" height="17"/>
+                                            <rect key="frame" x="71" y="1" width="55" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -102,21 +102,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SessionDetailsFieldValueCell" id="und-AO-Eou" customClass="SessionDetailsFieldValueCell" customModule="PokerPlus" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsDateCell" id="und-AO-Eou" customClass="SessionDetailsFieldValueCell" customModule="PokerPlus" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="und-AO-Eou" id="Z8E-QJ-Fjq">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rm-wb-FZw">
-                                            <rect key="frame" x="8" y="11" width="86" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rm-wb-FZw">
+                                            <rect key="frame" x="8" y="11" width="489" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field Value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CF-PQ-5Fo">
-                                            <rect key="frame" x="509" y="11" width="83" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="12/30/2015" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CF-PQ-5Fo">
+                                            <rect key="frame" x="505" y="11" width="87" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -127,11 +127,210 @@
                                         <constraint firstItem="1CF-PQ-5Fo" firstAttribute="centerY" secondItem="Z8E-QJ-Fjq" secondAttribute="centerY" id="9dd-hs-hDt"/>
                                         <constraint firstItem="1CF-PQ-5Fo" firstAttribute="trailing" secondItem="Z8E-QJ-Fjq" secondAttribute="trailingMargin" id="PWZ-qv-e2t"/>
                                         <constraint firstItem="0rm-wb-FZw" firstAttribute="centerY" secondItem="Z8E-QJ-Fjq" secondAttribute="centerY" id="a2T-3j-Oh6"/>
+                                        <constraint firstItem="1CF-PQ-5Fo" firstAttribute="leading" secondItem="0rm-wb-FZw" secondAttribute="trailing" constant="8" id="gyl-wX-4fM"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="labelFieldName" destination="0rm-wb-FZw" id="TRU-4j-oaK"/>
                                     <outlet property="labelFieldValue" destination="1CF-PQ-5Fo" id="taS-FE-MKY"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsGameTypeCell" id="Ano-FR-gzT" customClass="SessionDetailsFieldValueCell" customModule="PokerPlus" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ano-FR-gzT" id="8TC-Rt-lWR">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HG-Q0-tzs">
+                                            <rect key="frame" x="8" y="11" width="444" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="No Limit Hold'Em" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aL-71-hmB">
+                                            <rect key="frame" x="460" y="11" width="132" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4HG-Q0-tzs" firstAttribute="leading" secondItem="8TC-Rt-lWR" secondAttribute="leadingMargin" id="OEe-bY-zFv"/>
+                                        <constraint firstItem="0aL-71-hmB" firstAttribute="trailing" secondItem="8TC-Rt-lWR" secondAttribute="trailingMargin" id="ebb-jN-Vx3"/>
+                                        <constraint firstItem="0aL-71-hmB" firstAttribute="leading" secondItem="4HG-Q0-tzs" secondAttribute="trailing" constant="8" id="lHh-XM-NhH"/>
+                                        <constraint firstItem="0aL-71-hmB" firstAttribute="centerY" secondItem="8TC-Rt-lWR" secondAttribute="centerY" id="q7q-EW-OuQ"/>
+                                        <constraint firstItem="4HG-Q0-tzs" firstAttribute="centerY" secondItem="8TC-Rt-lWR" secondAttribute="centerY" id="vYU-qG-oeW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelFieldName" destination="4HG-Q0-tzs" id="Axd-d1-qzi"/>
+                                    <outlet property="labelFieldValue" destination="0aL-71-hmB" id="LaV-Jz-wNJ"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsTableTypeCell" id="yjK-lW-a64" customClass="SessionDetailsFieldValueCell" customModule="PokerPlus" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="180" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yjK-lW-a64" id="Px4-tH-pHo">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SO6-UD-uzC">
+                                            <rect key="frame" x="8" y="11" width="510" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Full Ring" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tln-uD-DSl">
+                                            <rect key="frame" x="526" y="11" width="65" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tln-uD-DSl" firstAttribute="trailing" secondItem="Px4-tH-pHo" secondAttribute="trailingMargin" id="2iz-bP-a28"/>
+                                        <constraint firstItem="tln-uD-DSl" firstAttribute="centerY" secondItem="Px4-tH-pHo" secondAttribute="centerY" id="6PU-gd-uRh"/>
+                                        <constraint firstItem="tln-uD-DSl" firstAttribute="leading" secondItem="SO6-UD-uzC" secondAttribute="trailing" constant="8" id="92X-Jk-3tb"/>
+                                        <constraint firstItem="SO6-UD-uzC" firstAttribute="leading" secondItem="Px4-tH-pHo" secondAttribute="leadingMargin" id="kcm-yQ-mEN"/>
+                                        <constraint firstItem="SO6-UD-uzC" firstAttribute="centerY" secondItem="Px4-tH-pHo" secondAttribute="centerY" id="vpZ-Vb-2oI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelFieldName" destination="SO6-UD-uzC" id="11T-BM-q2d"/>
+                                    <outlet property="labelFieldValue" destination="tln-uD-DSl" id="qtU-l8-DBy"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsStakesCell" id="bBz-sP-aQt" customClass="SessionDetailsFieldValueCell" customModule="PokerPlus" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="224" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bBz-sP-aQt" id="O8y-cl-HpP">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stakes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQm-Ub-qpx">
+                                            <rect key="frame" x="8" y="11" width="520" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="$1 - $2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0i-Rh-205">
+                                            <rect key="frame" x="536" y="11" width="55" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cQm-Ub-qpx" firstAttribute="leading" secondItem="O8y-cl-HpP" secondAttribute="leadingMargin" id="6W5-nZ-QPQ"/>
+                                        <constraint firstItem="T0i-Rh-205" firstAttribute="trailing" secondItem="O8y-cl-HpP" secondAttribute="trailingMargin" id="Iis-d2-yaw"/>
+                                        <constraint firstItem="cQm-Ub-qpx" firstAttribute="centerY" secondItem="O8y-cl-HpP" secondAttribute="centerY" id="L9x-9d-ysz"/>
+                                        <constraint firstItem="T0i-Rh-205" firstAttribute="leading" secondItem="cQm-Ub-qpx" secondAttribute="trailing" constant="8" id="jDP-jc-cyp"/>
+                                        <constraint firstItem="T0i-Rh-205" firstAttribute="centerY" secondItem="O8y-cl-HpP" secondAttribute="centerY" id="kNk-rA-5Mm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelFieldName" destination="cQm-Ub-qpx" id="vnJ-cT-fRf"/>
+                                    <outlet property="labelFieldValue" destination="T0i-Rh-205" id="Zno-IX-jAv"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsProfitCell" id="p6c-ov-eNm" customClass="SessionDetailsFieldValueCell" customModule="PokerPlus" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="268" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p6c-ov-eNm" id="GWs-Qr-Rtl">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9C-Ox-pUN">
+                                            <rect key="frame" x="8" y="11" width="522" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="+ $100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIB-uL-0zj">
+                                            <rect key="frame" x="538" y="11" width="54" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="MIB-uL-0zj" firstAttribute="centerY" secondItem="GWs-Qr-Rtl" secondAttribute="centerY" id="1hO-fZ-gqu"/>
+                                        <constraint firstItem="MIB-uL-0zj" firstAttribute="trailing" secondItem="GWs-Qr-Rtl" secondAttribute="trailingMargin" id="4At-j2-EMg"/>
+                                        <constraint firstItem="c9C-Ox-pUN" firstAttribute="centerY" secondItem="GWs-Qr-Rtl" secondAttribute="centerY" id="XE4-jr-oKE"/>
+                                        <constraint firstItem="MIB-uL-0zj" firstAttribute="leading" secondItem="c9C-Ox-pUN" secondAttribute="trailing" constant="8" id="czc-pA-Lt0"/>
+                                        <constraint firstItem="c9C-Ox-pUN" firstAttribute="leading" secondItem="GWs-Qr-Rtl" secondAttribute="leadingMargin" id="gS4-f8-mlN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelFieldName" destination="c9C-Ox-pUN" id="Nop-jd-WSO"/>
+                                    <outlet property="labelFieldValue" destination="MIB-uL-0zj" id="dRn-D1-0oT"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsTotalBuyinCell" id="2ms-LS-Ine" customClass="SessionDetailsFieldValueCell" customModule="PokerPlus" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="312" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2ms-LS-Ine" id="POx-3h-qr4">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Buyin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbF-kX-fjK">
+                                            <rect key="frame" x="8" y="11" width="534" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="$200" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkU-7e-jpY">
+                                            <rect key="frame" x="550" y="11" width="41" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qkU-7e-jpY" firstAttribute="leading" secondItem="KbF-kX-fjK" secondAttribute="trailing" constant="8" id="6t6-kI-aK7"/>
+                                        <constraint firstItem="KbF-kX-fjK" firstAttribute="leading" secondItem="POx-3h-qr4" secondAttribute="leadingMargin" id="9F5-Z4-GOv"/>
+                                        <constraint firstItem="qkU-7e-jpY" firstAttribute="centerY" secondItem="POx-3h-qr4" secondAttribute="centerY" id="Tms-61-rAv"/>
+                                        <constraint firstItem="qkU-7e-jpY" firstAttribute="trailing" secondItem="POx-3h-qr4" secondAttribute="trailingMargin" id="TpC-ai-mPm"/>
+                                        <constraint firstItem="KbF-kX-fjK" firstAttribute="centerY" secondItem="POx-3h-qr4" secondAttribute="centerY" id="TuB-U0-CBK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelFieldName" destination="KbF-kX-fjK" id="keh-ti-mUK"/>
+                                    <outlet property="labelFieldValue" destination="qkU-7e-jpY" id="RhT-tt-7EE"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsExpensesCell" id="5bZ-CW-bFl" customClass="SessionDetailsFieldValueCell" customModule="PokerPlus" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="356" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5bZ-CW-bFl" id="vOK-rO-rdM">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHQ-Pc-ILP">
+                                            <rect key="frame" x="8" y="11" width="554" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="$9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7F-2s-YVo">
+                                            <rect key="frame" x="570" y="11" width="21" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="T7F-2s-YVo" firstAttribute="leading" secondItem="yHQ-Pc-ILP" secondAttribute="trailing" constant="8" id="Kuf-ta-ZZo"/>
+                                        <constraint firstItem="T7F-2s-YVo" firstAttribute="centerY" secondItem="vOK-rO-rdM" secondAttribute="centerY" id="VVK-gG-XTE"/>
+                                        <constraint firstItem="yHQ-Pc-ILP" firstAttribute="centerY" secondItem="vOK-rO-rdM" secondAttribute="centerY" id="hbB-Hx-AQo"/>
+                                        <constraint firstItem="T7F-2s-YVo" firstAttribute="trailing" secondItem="vOK-rO-rdM" secondAttribute="trailingMargin" id="nJ9-81-43c"/>
+                                        <constraint firstItem="yHQ-Pc-ILP" firstAttribute="leading" secondItem="vOK-rO-rdM" secondAttribute="leadingMargin" id="oNC-24-mgH"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelFieldName" destination="yHQ-Pc-ILP" id="O1o-Rc-V3i"/>
+                                    <outlet property="labelFieldValue" destination="T7F-2s-YVo" id="Tlb-tg-RVJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

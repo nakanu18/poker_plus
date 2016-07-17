@@ -28,21 +28,6 @@ class SessionsDetailsViewController: UITableViewController
 
     func setupWithSession( sessionModel: SessionModel )
     {
-//        var gameType: GameType        = .HoldEm_NoLimit
-//        var tableType: TableType      = .FullRing
-//        var smallBlind: NSInteger     = 1
-//        var bigBlind: NSInteger       = 2
-//        
-//        var dateBegin: NSDate         = NSDate()
-//        var dateEnd: NSDate           = NSDate()
-//        var breakTime: NSTimeInterval = 0.0
-//        
-//        var buyins: [NSNumber]        = []
-//        var cashout: NSInteger        = 0
-//        var expenses: [NSNumber]      = []
-//        
-//        var notes: NSString           = ""
-        
         self.sessionModel = sessionModel
     }
     
@@ -61,16 +46,38 @@ class SessionsDetailsViewController: UITableViewController
     
     override func tableView( tableView: UITableView, numberOfRowsInSection section: Int ) -> Int
     {
-        return 1
+        return 7
     }
     
     override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath ) -> UITableViewCell
     {
+        guard let rowType = SessionDetailsRowType( rawValue: indexPath.row ) else
+        {
+            return UITableViewCell()
+        }
+        
         let cell: SessionDetailsFieldValueCell
         
-        cell = tableView.dequeueReusableCellWithIdentifier("SessionDetailsFieldValueCell") as! SessionDetailsFieldValueCell
-        cell.setupWithField( "Game", fieldValue: sessionModel.gameType.description() )
-        
+        cell = tableView.dequeueReusableCellWithIdentifier( rowType.cellIdentifier() ) as! SessionDetailsFieldValueCell
+        cell.nameText = rowType.title()
+
+        switch rowType
+        {
+            case .Date:
+                cell.valueText = NSDateFormatter.localizedStringFromDate( sessionModel.dateBegan, dateStyle: .MediumStyle, timeStyle: .MediumStyle )
+            case .GameType:
+                cell.valueText = sessionModel.gameType.description()
+            case .TableType:
+                cell.valueText = sessionModel.tableType.description()
+            case .Stakes:
+                cell.valueText = "$\(sessionModel.smallBlind) - $\(sessionModel.bigBlind)"
+            case .Profit:
+                cell.valueText = "$\(sessionModel.cashout - sessionModel.totalBuyin)"
+            case .TotalBuyin:
+                cell.valueText = "$\(sessionModel.totalBuyin)"
+            case .Expenses:
+                cell.valueText = "$\(sessionModel.totalExpenses)"
+        }
         return cell
     }
 }
